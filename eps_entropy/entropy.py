@@ -27,12 +27,12 @@ def convert(words):
     yield from map(lambda x: "".join(map(str, x)), words)
 
 
-def translate(words):
+def translate(words, tab=None):
     """Enumerates a collection of words.
 
     Each word will be translated into a integer.
     """
-    tab = {}
+    tab = tab if isinstance(tab, dict) else {}
     i = 0
     for word in words:
         if word not in tab:
