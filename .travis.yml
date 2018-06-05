@@ -1,0 +1,19 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install -r requirements-dev.txt
+script:
+  - py.test
+after_success:
+  - codecov
+deploy:
+  skip_cleanup: true
+  provider: pypi
+  user: ohjeah
+  password: $PYPI_PW
+  distributions: "sdist bdist_wheel"
+  on:
+    tags: true
+    python: "3.6"
+    all_branches: true

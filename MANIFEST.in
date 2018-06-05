@@ -1,0 +1,2 @@
+include versioneer.py
+include eps_entropy/_version.py
