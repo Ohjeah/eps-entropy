@@ -1,0 +1,6 @@
+-e .
+pytest
+pytest-cov
+jupyter
+notebook
+matplotlib

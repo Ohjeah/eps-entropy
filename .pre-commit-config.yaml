@@ -1,0 +1,13 @@
+fail_fast: true
+repos:
+- repo: git://github.com/pre-commit/pre-commit-hooks
+  sha: v1.2.3
+  hooks:
+    - id: check-added-large-files
+      args: ["--maxkb=250"]
+    - id: check-merge-conflict
+- repo: https://github.com/ohjeah/nbstripout
+  rev: master
+  hooks:
+    - id: nbstripout
+      files: ".ipynb"
